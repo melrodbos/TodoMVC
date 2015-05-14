@@ -21,4 +21,9 @@ alert("I'm alive!")
 
 document.head.parentElement.className = "js"; // It's alive!
 
-//var elements = document.querySelectorAll(h3);
+//var elements = document.querySelectorAll('h3');
+// lets start by defining a variable and play with what we feed to .querySelector?
+// header,
+
+var elements = document.querySelectorAll('h3');
+//
