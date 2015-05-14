@@ -1,34 +1,77 @@
-// var chai = require('chai'),
-//     expect = chai.expect;
+(function(window){
+ var taskList = []
 
-var expect = require('chai').expect;
+ function listTask(list){
+ }
 
-var taskList = [ ];
+ function addTask(task, list){
+   return list.push(task);
+ }
 
-// I can list my tasks...
-function listTasks(){
-}
+ function deleteTask (position, list){
+   return list.splice(position, 1);
+ }
 
-function addTaskToList(task, list){
-    return list.push(task);
-}
+   window.todos = {
+     "taskList": taskList,
+     "addTask": addTask,
+     // "completeTask": completeTask,
+     "deleteTask": deleteTask
+   };
+})(window);
 
-expect(taskList.length).to.equal(0);
-addTaskToList("Remember the milk", taskList);
-expect(taskList[0]).to.equal("Remember the milk");
-expect(taskList.length).to.equal(1);
+pope410211 [4:20 PM]
+(function (window) {
+    'use strict'; // For bonus points what does this do?
+// debugger;
 
-expect(taskList.length).to.equal(1);
-addTaskToList("Take out the trash", taskList);
-expect(taskList[1]).to.equal("Take out the trash");
-expect(taskList.length).to.equal(2);
 
-expect(taskList.length).to.equal(2);
-addTaskToList("Clean the house", taskList);
-expect(taskList[2]).to.equal("Clean the house");
-expect(taskList.length).to.equal(3);
+    //  CONTROLLER FOR: I can ada a task to my list...
+    //  1. What event should I be listening for? keydn, keyup, keypress
+    //  2. what element makes since to listen for that event? input.new-todo
+    //  3. What do I need to do when that event fires?
 
-expect(taskList.length).to.equal(3);
-addTaskToList("Laundry AM", taskList);
-expect(taskList[3]).to.equal("Laundry AM");
-expect(taskList.length).to.equal(4);
+                    // one way to write the query selector
+                        // document.querySelector('input.new-todo');
+                        // .addEventListener('keydn', function addTodoController(){
+                        // })
+        var newTodoInput = document.querySelector('input.new-todo')
+
+
+        // TO ADD NEW TASK:
+        // GIVEN an HTML element <input class="new-todo">
+        // WHEN the user types a task AND presses the "ENTER" key
+
+        // newTodoInput.addEventListener('keyup', function(){ console.log(arguments);})
+        newTodoInput.addEventListener('keyup', function addTodoController(event){
+                if (event.keyCode === 13){// AND presses the "ENTER" key
+
+                var task = document.querySelector('input.new-todo').value;
+                todos.taskList.push(task);
+                        document.querySelector('input.new-todo').value= "";
+
+                    console.log(todos.taskList);
+
+                    // THEN:
+                    // DONE  Save the thing to remember (task) to the list of things to remember(taskList)
+                    // DONE  Remove the things to remember(task) from the "what needs to be done?"box(input new todo)
+                    // TODO  Update the number of tasks in the footer...
+                    // TODO  Add a new task(ul.todo-list > li) to the list of tasks in the display (ul.todo-list)
+                }
+
+
+    }); // END addEventListner (addTodoController)
+
+// function lookMaArguments(){ console.log(arguments);}
+    // lookMaArguments();
+    // lookMaArguments(1, 2, 3);
+    // lookMaArguments('hello', 'clarise');
+    // var element = document.querySelector('li');
+
+/**        _.forEach(element, function(element, index, elements){
+            element.addEventListener('click', function(){
+                element.childElement.classList.toggle('checkbox');
+            });
+            });*/
+
+})(window);
