@@ -64,9 +64,12 @@
 (function (window){
     var taskList = [];
 
-    // I can list my tasks...
-    function listTasks(list){
-      // TODO: make this do something...
+		function listTask(){
+		//    return list.push(task);
+
+		// I can list my tasks...
+    // function listTasks(list){
+    //   // TODO: make this do something...
     }
 
     //I can add a task to my list...
@@ -77,20 +80,33 @@
       return list.push(task);
     }
 
+		function editTask(position, newTaskName){
+			return taskList[position] = newTaskName;
+		}
+
+		function deleteTask(task, list){
+			return list.splice(task, 1);
+
+
+		}
     //I can check a task off my list...
     function completeTask(task, list){
-      return list[task - 1] += ' COMPLETE';
+      return tasklist[task - 1] += ' COMPLETE';
     }
-
+}
     //I can delete a task off my list...
-    function deleteTask(task, list){
-      return list.splice(task - 1, 1);
+    // function deleteTask(task, list){
+		//
+		//
+    //   return list.splice(task - 1, 1);
     }
 
     window.todos = {
-        "addTaskToList": addTaskToList,
+        "taskList": addTaskToList,
+				"addTaskToList": addTaskToList
         "completeTask": completeTask,
         "deleteTask": deleteTask
+
     };
 
 })(window);
