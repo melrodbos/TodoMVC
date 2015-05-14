@@ -34,7 +34,7 @@
                     // DONE  Remove the things to remember(task) from the "what needs to be done?"box(input new todo)
                     // TODO  Update the number of tasks in the footer...
                     // TODO  Add a new task(ul.todo-list > li) to the list of tasks in the display (ul.todo-list)
-                }
+              //  }
 
 
     }); // END addEventListner (addTodoController)
