@@ -1,3 +1,38 @@
+(function(window){
+ var taskList = []
+
+ function listTask(list){
+ }
+
+ function addTask(task, list){
+   return list.push(task);
+ }
+
+ function deleteTask (position, list){
+   return list.splice(position, 1);
+ }
+
+   window.todos = {
+     "taskList": taskList,
+     "addTask": addTask,
+     // "completeTask": completeTask,
+     "deleteTask": deleteTask
+   };
+})(window);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // (function (window) { // IIFE: Immediately Invoked Function Expression
 // // 	'use strict'; // For bonus points, what does this do?
 // //
@@ -61,52 +96,52 @@
 
 //Copy from repo:
 
-(function (window){
-    var taskList = [];
-
-		function listTask(){
-		//    return list.push(task);
-
-		// I can list my tasks...
-    // function listTasks(list){
-    //   // TODO: make this do something...
-    }
+// (function (window){
+    // var taskList = [];
+		//
+		// function listTask(){
+		// //    return list.push(task);
+		//
+		// // I can list my tasks...
+    // // function listTasks(list){
+    // //   // TODO: make this do something...
+    //}
 
     //I can add a task to my list...
-    function addTaskToList(task, list){
-      //What is the task?
-      //Where is the task going?
-      //What order / priority?
-      return list.push(task);
-    }
-
-		function editTask(position, newTaskName){
-			return taskList[position] = newTaskName;
-		}
-
-		function deleteTask(task, list){
-			return list.splice(task, 1);
-
-
-		}
-    //I can check a task off my list...
-    function completeTask(task, list){
-      return tasklist[task - 1] += ' COMPLETE';
-    }
-}
+    // function addTaskToList(task, list){
+    //   //What is the task?
+    //   //Where is the task going?
+    //   //What order / priority?
+    //   return list.push(task);
+    // }
+		//
+		// function editTask(position, newTaskName){
+		// 	return taskList[position] = newTaskName;
+		// }
+		//
+		// function deleteTask(task, list){
+		// 	return list.splice(task, 1);
+		//
+		//
+		// }
+    // //I can check a task off my list...
+    // function completeTask(task, list){
+    //   return tasklist[task - 1] += 'COMPLETE';
+    // }
+// }
     //I can delete a task off my list...
     // function deleteTask(task, list){
 		//
 		//
     //   return list.splice(task - 1, 1);
-    }
-
-    window.todos = {
-        "taskList": addTaskToList,
-				"addTaskToList": addTaskToList
-        "completeTask": completeTask,
-        "deleteTask": deleteTask
-
-    };
-
-})(window);
+    // }
+//
+//     window.todos = {
+//         "taskList": addTaskToList,
+// 				"addTaskToList": addTaskToList
+//         "completeTask": completeTask,
+//         "deleteTask": deleteTask
+//
+//     };
+//
+// })(window);
