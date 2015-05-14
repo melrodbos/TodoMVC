@@ -14,6 +14,11 @@
 Confusssion cleared? The MVC works with files:
 Model: data storage
 View: the part of JS that we see in the html file.
-Controllers: action manager */
+Controllers: action manager it can send commands to the model to update its state (Wikipedia)*/
+
+alert("I'm alive!")
+//debugger;
 
 document.head.parentElement.className = "js"; // It's alive!
+
+//var elements = document.querySelectorAll(h3);
