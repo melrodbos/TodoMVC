@@ -1,12 +1,21 @@
 // var chai = require('chai'),
 //     expect = chai.expect;
 
-var expect = require('chai').expect;
-
+// var expect = require('chai').expect;
+(function(window){
+  'use strict';
+}
 var taskList = [ ];
+
+console.log(list);
+
+addTaskToList("Remember the milk", list);
+
+console.log(list);
 
 // I can list my tasks...
 function listTasks(){
+
 }
 
 function addTaskToList(task, list){
@@ -37,18 +46,17 @@ expect(taskList.length).to.equal(4);
 
 
 // I can delete a task...
-function addTaskToList(task, list){
-    return list.push({
-      text: task, completed: false
-    });
+// function addTaskToList(task, list){
+//     return list.push({
+//       text: task, completed: false
+//     });
     // add task to list somehow in the bottom
 }
 
-expect(taskList.length).to.equal(0);
-addTaskToList("Remember the milk", taskList);
-expect(taskList.length).to.equal(1);
-// expect(taskList[0]).text);
-to.equal.
+// expect(taskList.length).to.equal(0);
+// addTaskToList("Remember the milk", taskList);
+// expect(taskList.[0]).to.equal("Remamber the milk");
+// expect(taskList.length).to.equal
 
 // in order to prioritize we need to delete a task first.
 // Remember: strings are not always the correct answer
@@ -66,22 +74,6 @@ to.equal.
 
 
 //Click on your cheat sheet!!!!
-
-
-// I can edit the task...
-
-for ( var index = 0; index < elements.length; index++ ){
-    var element = elements[index]
-    element.addEventListener('click', function(){
-        console.log(elements, index, element);
-        element.parentElement.classList.toggle('new-todo');
-    });
-}
-// console.log(index);
-
-User story:
-I can I add a task to my list...
-
 
 
 
