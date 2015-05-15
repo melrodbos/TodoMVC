@@ -25,8 +25,11 @@
   }); // END addEventListner (addTodoController)
 
 var deleteTask = document.querySelector('ul.todo-list');
+
 deleteTask.addEventListner('mouseover', function() {
+
 console.log("hello");
+
 });
 
 

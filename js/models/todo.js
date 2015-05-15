@@ -1,8 +1,8 @@
-(function(window){
+(function (window){
  var taskList = [ ];
 
-// function listTask(){
-  // return 
+function listTask(){
+  // return
 
  }
 
@@ -20,8 +20,9 @@
  }
 
 function completeTask(task, list){
-  return list[task - 1] += "Task Completed"
+  return list[task - 1] += "COMPLETE"
 }
+
    window.todos = {
      "taskList": taskList,
      "addTaskToList": addTaskToList,
