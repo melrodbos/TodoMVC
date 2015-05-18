@@ -1,21 +1,24 @@
-(function(window){
- var taskList = []
+(function(window) {
+ var taskList = [];
 
- function listTask(list){
+ function listTasks(list) {
  }
 
- function addTask(task, list){
+ function addTaskToList(task, list) {
    return list.push(task);
  }
 
- function deleteTask (position, list){
-   return list.splice(position, 1);
+ function deleteTask (task, list) {
+   return list.splice(task, 1);
+ }
+
+ function completeTask(task, list) {
+   return list[task - 1] += "COMPLETE";
  }
 
    window.todos = {
-     "taskList": taskList,
-     "addTask": addTask,
-     // "completeTask": completeTask,
+     "addTaskToList": addTaskToList,
      "deleteTask": deleteTask
+     "completeTask": completeTask
    };
 })(window);

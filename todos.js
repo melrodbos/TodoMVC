@@ -1,5 +1,5 @@
-(function(window){
- var taskList = []
+(function(window) {
+ var taskList = [];
 
  function listTask(list){
  }
@@ -12,10 +12,14 @@
    return list.splice(position, 1);
  }
 
+ function completeTask(task, list){
+   return list.splice(task - 1, 1);
+ }
+
    window.todos = {
      "taskList": taskList,
      "addTask": addTask,
-     // "completeTask": completeTask,
      "deleteTask": deleteTask
+     "completeTask": completeTask
    };
 })(window);
