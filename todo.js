@@ -8,7 +8,7 @@
    return list.push(task);
  }
 
- function deleteTask (task, list) {
+ function deleteTask(task, list) {
    return list.splice(task, 1);
  }
 
