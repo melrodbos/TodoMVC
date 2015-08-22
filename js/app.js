@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 (function(window) {
     'use strict'; // For bonus points what does this do?
     // debugger;
@@ -122,15 +121,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 // //Copied the following documentation from the class repo (just in case I had any typos):
 //
 //
@@ -186,20 +176,6 @@
 // })(window);
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 // // // My version:
 // // (function (window) { //IIFE: Immediately invoke dfn expression
 // // 	'use strict'; //what does this do??
@@ -234,4 +210,3 @@
 // // }
 //
 // // // });
->>>>>>> 4f57a20f006ce2204432768ad47919a65b7d5d7a
